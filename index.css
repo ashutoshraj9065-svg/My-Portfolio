@@ -16,6 +16,7 @@ header{
     padding: 20px 100px;
     background-color: #020617;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    
 }
 
 ul{
@@ -40,3 +41,78 @@ nav a:hover{
 .logo span{
     color: #38bdf8;
 }
+.hero-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10%;
+    min-height: 100vh;
+    background-color: #0f172a;
+    color: white;
+    gap: 80px;
+
+}
+.hero-text{
+    flex: 1;
+}
+.hero-text h1{
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+.hero-text h1 span{
+    color: #38bdf8;
+}
+.hero-text h2{
+    font-size: 28px;
+    color: #94a3b8;
+    margin-bottom: 20px;
+    /* display: inline-block; */
+    max-width: 310px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.hero-text p{
+    font-size: 18px;
+    line-height: 1.8;
+    color: #cbd5e1;
+    margin-bottom: 20px;
+    max-width: 600px;
+}
+.btn{
+    padding: 12px 24px;
+    background-color: #38bdf8;
+    color:  #0f172a;
+    border-radius: 10px;
+    font-weight: bold;
+}
+.hero-image{
+    flex: 1;
+    text-align: center;
+}
+.hero-image img{
+    width: 320px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid  #38bdf8;
+    
+}
+.typing{
+    display: inline-block;
+    width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid #00f7ff;
+    animation: typing 4s steps(30) infinite alternate, blink 0.8s infinite; ;
+}
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+   
+}
+@keyframes blink {
+    0%, 100% { border-color: transparent; }
+    50% { border-color: #00f7ff; }
+    100% { border-color: transparent; }
+}
+
