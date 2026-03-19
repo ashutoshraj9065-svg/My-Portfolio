@@ -1,47 +1,68 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
+html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    width: 100%;
+   
+}
+
+body {
     margin: 0;
     font-family: Arial;
     background: #0f172a;
     color: white;
+     overflow-x: hidden;
+     width: 100%;
 }
-header{
+
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 100px;
     background-color: #020617;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
     
+
 }
 
-ul{
+ul {
     list-style: none;
     display: flex;
 }
 
-nav a{
+nav a {
     color: #e2e8f0;
     text-decoration: none;
     margin-left: 30px;
     font-size: 16px;
+     
 }
-nav a:hover{
+
+nav a:hover {
     color: #38bdf8;
 }
-.logo{
+
+.logo {
     font-size: 28px;
     font-weight: bold;
     color: white;
 }
-.logo span{
+
+.logo span {
     color: #38bdf8;
 }
-.hero-section{
+
+.hero-section {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -50,19 +71,24 @@ nav a:hover{
     background-color: #0f172a;
     color: white;
     gap: 80px;
+    margin-top: 30px;
 
 }
-.hero-text{
+
+.hero-text {
     flex: 1;
 }
-.hero-text h1{
+
+.hero-text h1 {
     font-size: 48px;
     margin-bottom: 15px;
 }
-.hero-text h1 span{
+
+.hero-text h1 span {
     color: #38bdf8;
 }
-.hero-text h2{
+
+.hero-text h2 {
     font-size: 28px;
     color: #94a3b8;
     margin-bottom: 20px;
@@ -71,48 +97,133 @@ nav a:hover{
     overflow: hidden;
     white-space: nowrap;
 }
-.hero-text p{
+
+.hero-text p {
     font-size: 18px;
     line-height: 1.8;
     color: #cbd5e1;
     margin-bottom: 20px;
     max-width: 600px;
 }
-.btn{
+
+.btn {
     padding: 12px 24px;
     background-color: #38bdf8;
-    color:  #0f172a;
+    color: #0f172a;
     border-radius: 10px;
     font-weight: bold;
+    transition: all 0.5s ease;
 }
-.hero-image{
+
+.hero-image {
     flex: 1;
     text-align: center;
 }
-.hero-image img{
+
+.hero-image img {
     width: 320px;
     height: 320px;
     object-fit: cover;
     border-radius: 50%;
-    border: 4px solid  #38bdf8;
-    
+    border: 4px solid #38bdf8;
+
 }
-.typing{
+
+.typing {
     display: inline-block;
     width: 0;
     overflow: hidden;
     white-space: nowrap;
-    border-right: 3px solid #00f7ff;
-    animation: typing 4s steps(30) infinite alternate, blink 0.8s infinite; ;
+    /* jo comment kar rakha hai is cursor hide ho ja raha hai islie comment kar diye */
+    /* border-right: 3px solid #00f7ff; */
+    animation: typing 4s steps(30) infinite alternate, blink 0.8s infinite;
+    ;
 }
+
 @keyframes typing {
-    from { width: 0; }
-    to { width: 100%; }
-   
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+
 }
+
 @keyframes blink {
-    0%, 100% { border-color: transparent; }
-    50% { border-color: #00f7ff; }
-    100% { border-color: transparent; }
+
+    0%,
+    100% {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: #00f7ff;
+    }
+
+    100% {
+        border-color: transparent;
+    }
+}
+.btn:hover {
+    background-color: #0f172a;
+    color: #38bdf8;
+    border: 2px solid #38bdf8;
+}
+
+.about-section{
+    padding: 80px, 10%;
+    background-color: #111827;
+}
+.about-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+
+}
+.about-image{
+    flex: 1;
+    text-align: center;
+
+
+}
+ .about-image img{
+    width: 350px;
+    border-radius: 12px;
+    box-shadow: 0 0 25px rgba(50,189,248,0.3);
+    
+}
+.about-text{
+    flex: 1;
+}
+.about-text h2{
+    font-size: 36px;
+    color: #38bdf8;
+    margin-bottom: 20px;
+}
+p{
+    font-size: 18px;
+    color:  #cbd5e1;
+    line-height: 1.8;
+    margin-bottom: 18px;
+}
+.btn2{
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    padding: 12px 25px;
+    background-color: #38bdf8;
+    border-radius: 8px;
+    color: #0f172a;
+    font-weight: bold;
+    transition: all 0.5s ease;
+}
+.btn2:hover{
+    background-color: green;
+    border: 2px solid #38bdf8;
+    
 }
 
