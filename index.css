@@ -187,6 +187,7 @@ nav a:hover {
 .about-image{
     flex: 1;
     text-align: center;
+    
 
 
 }
@@ -194,6 +195,7 @@ nav a:hover {
     width: 350px;
     border-radius: 12px;
     box-shadow: 0 0 25px rgba(50,189,248,0.3);
+    
     
 }
 .about-text{
@@ -216,10 +218,12 @@ p{
     text-decoration: none;
     padding: 12px 25px;
     background-color: #38bdf8;
-    border-radius: 8px;
+    border-radius: 12px;
     color: #0f172a;
     font-weight: bold;
     transition: all 0.5s ease;
+    margin-top: 10px;
+    margin-bottom: 20px;
 }
 .btn2:hover{
     background-color: green;
@@ -390,7 +394,7 @@ p{
 }
 
 .project-card-portfolio {
-    margin-top: 10px;
+    margin-top: 15px;
      padding: 25px;
   border-radius: 15px;
   background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)),
