@@ -31,6 +31,12 @@ header {
     left: 0;
     width: 100%;
     z-index: 1000;
+     background: linear-gradient(rgba(10,15,31,0.95), rgba(10,15,31,0.95)),
+              url("https://images.unsplash.com/photo-1518770660439-4636190af475");
+
+  background-size: cover;
+  background-position: center;
+  backdrop-filter: blur(6px);
     
 
 }
@@ -72,6 +78,12 @@ nav a:hover {
     color: white;
     gap: 80px;
     margin-top: 30px;
+    background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.9)),
+              url("https://images.unsplash.com/photo-1517430816045-df4b7de11d1d");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 
 }
 
@@ -118,6 +130,20 @@ nav a:hover {
 .hero-image {
     flex: 1;
     text-align: center;
+    position: relative;
+}
+.about-image::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 350px;
+    height: 100%;
+    border-radius: 12px;
+
+    background: rgba(0,0,0,0.3);
+    pointer-events: none;
 }
 
 .hero-image img {
@@ -126,9 +152,22 @@ nav a:hover {
     object-fit: cover;
     border-radius: 50%;
     border: 4px solid #38bdf8;
+      filter: brightness(0.8) contrast(1.1);
+
+    /* Soft glow */
+    box-shadow: 0 0 25px rgba(56,189,248,0.25);
+
+    transition: all 0.4s ease;
 
 }
+.hero-image img:hover {
+     transform: scale(1.05);
 
+    /* thoda bright ho hover par */
+    filter: brightness(1) contrast(1.2);
+
+    box-shadow: 0 0 35px rgba(56,189,248,0.6);
+}
 .typing {
     display: inline-block;
     width: 0;
@@ -173,9 +212,17 @@ nav a:hover {
 }
 
 .about-section{
-    padding: 80px, 10%;
-    background-color: #111827;
+  padding: 90px 10%;
+  color: white;
+
+  background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.9)),
+              url("https://images.unsplash.com/photo-1492724441997-5dc865305da7");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
+
 .about-container{
     display: flex;
     justify-content: center;
@@ -187,15 +234,44 @@ nav a:hover {
 .about-image{
     flex: 1;
     text-align: center;
+     position: relative;
 
 
 }
- .about-image img{
+.about-image::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 350px;
+    height: 100%;
+    border-radius: 12px;
+
+    background: rgba(0,0,0,0.3);
+    pointer-events: none;
+}
+ .about-image img {
     width: 350px;
     border-radius: 12px;
-    box-shadow: 0 0 25px rgba(50,189,248,0.3);
-    
+
+    /* Image ko dark + premium banane ke liye */
+    filter: brightness(0.8) contrast(1.1);
+
+    /* Soft glow */
+    box-shadow: 0 0 25px rgba(56,189,248,0.25);
+
+    transition: all 0.4s ease;
 }
+.about-image img:hover {
+    transform: scale(1.05);
+
+    /* thoda bright ho hover par */
+    filter: brightness(1) contrast(1.2);
+
+    box-shadow: 0 0 35px rgba(56,189,248,0.6);
+}
+
 .about-text{
     flex: 1;
 }
@@ -231,6 +307,11 @@ p{
     padding: 90px 10%;
     background-color: #0a0f1f;
     color: white;
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.9)),
+url("https://images.unsplash.com/photo-1535223289827-42f1e9919769");
+    background-size: cover;
+    background-position: center;
+     background-repeat: no-repeat;
 }
 .skill-container{
     max-width: 1200px;
@@ -311,6 +392,11 @@ p{
   padding: 90px 10%;
   background: #0a0f1f;
   color: white;
+  background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.9)),
+url("https://images.unsplash.com/photo-1518779578993-ec3579fee39f");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .project-container {
@@ -390,7 +476,7 @@ p{
 }
 
 .project-card-portfolio {
-    margin-top: 10px;
+    margin-top: 15px;
      padding: 25px;
   border-radius: 15px;
   background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)),
@@ -405,3 +491,141 @@ p{
      
 }
 /* project section end */
+
+/* contact section start */
+
+.contact-section {
+  padding: 90px 10%;
+  color: white;
+  background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.9)),
+              url("https://images.unsplash.com/photo-1526378722484-bd91ca387e72");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
+
+.contact-container {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.contact-title {
+  font-size: 2.5rem;
+  color: #00f7ff;
+  margin-bottom: 10px;
+}
+
+.contact-subtitle {
+  color: #cbd5e1;
+  max-width: 700px;
+  margin: 0 auto 50px;
+  line-height: 1.7;
+}
+
+.contact-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.contact-info {
+  flex: 1;
+  min-width: 280px;
+  text-align: left;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 30px;
+  border-radius: 15px;
+  border: 1px solid rgba(0, 247, 255, 0.15);
+  box-shadow: 0 0 20px rgba(0, 247, 255, 0.08);
+}
+
+.contact-info h3 {
+  color: #00f7ff;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+.contact-info p {
+  color: #e2e8f0;
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 12px;
+}
+
+.contact-form {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 30px;
+  border-radius: 15px;
+  border: 1px solid rgba(0, 247, 255, 0.15);
+  box-shadow: 0 0 20px rgba(0, 247, 255, 0.08);
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 1rem;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #cbd5e1;
+}
+
+.contact-form textarea {
+  resize: none;
+}
+
+.contact-btn {
+  display: inline-block;
+  padding: 14px 24px;
+  background: #00f7ff;
+  color: #0a0f1f;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact-btn:hover {
+  background: transparent;
+  color: #00f7ff;
+  border: 1px solid #00f7ff;
+}
+
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 70px 6%;
+  }
+
+  .contact-title {
+    font-size: 2rem;
+  }
+
+  .contact-subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 35px;
+  }
+
+  .contact-info,
+  .contact-form {
+    padding: 22px;
+  }
+}
+/* contact section end */
